@@ -1,0 +1,142 @@
+:root {
+    --code-input-height: 50px;
+    --challenge-width: 800px;
+    --font-size: 20px;
+
+    --background: #000;
+    --foreground: #fff;
+    --color: #0f0;
+    --code-error: #f00;
+}
+
+::selection {
+    background: var(--color);
+    color: var(--background);
+}
+
+nav {
+    width: 100%;
+    height: 100px;
+    font-size: 30px;
+    line-height: 100px;
+    user-select: none;
+}
+
+nav>a {
+    padding: 0px 30px;
+    text-decoration: none;
+    user-select: all;
+}
+
+nav>a::before {
+    content: ">";
+    margin-right: 10px;
+}
+
+body {
+    margin: 0;
+    background: var(--background);
+    font-family: monospace;
+    color: var(--foreground);
+}
+
+#ascii-art {
+    font-size: var(--font-size);
+    text-align: center;
+    width: 100%;
+    color: var(--color);
+    font-weight: bold;
+    user-select: none;
+}
+
+#code-input {
+    color: var(--color);
+    text-align: center;
+    font-size: var(--code-input-height);
+    margin: 10px;
+    user-select: none;
+    white-space: pre;
+}
+
+#code-input>span:not(:last-child) {
+    margin-right: 20px;
+}
+
+#code-input>span.u {
+    border-bottom: calc(var(--code-input-height) / 10) solid var(--color);
+}
+
+#code-input.error>span {
+    color: var(--code-error);
+    border-bottom: calc(var(--code-input-height) / 10) solid var(--code-error);
+}
+
+#challenge-description {
+    width: var(--challenge-width);
+    margin: auto;
+    margin-top: 50px;
+    font-size: 22px;
+}
+
+#copyright {
+    font-size: var(--font-size);
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    color: var(--color)
+}
+
+a {
+    color: var(--color);
+    font-weight: bold
+}
+
+th {
+    text-align: left;
+    padding: 10px;
+}
+
+table {
+    overflow: hidden;
+    margin: auto;
+    font-size: var(--font-size);
+    border: none;
+    margin-top: 50px;
+    width: var(--challenge-width);
+}
+
+td {
+    padding: 10px;
+    border: none;
+    vertical-align: top;
+}
+
+.challenge-entry {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid var(--color);
+    border-radius: 10px;
+}
+
+.challenge-entry:hover {
+    color: var(--color);
+}
+
+.challenge-entry>.challenge-title {
+    white-space: nowrap;
+}
+
+.challenge-entry>.challenge-description {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 400px;
+}
+
+main {
+    width: var(--challenge-width);
+    margin: auto;
+    font-size: var(--font-size);
+    line-height: 1.5;
+    margin-top: 50px;
+}
