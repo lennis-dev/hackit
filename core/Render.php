@@ -103,7 +103,6 @@ EOL;
     private function prepareChallengeList(array $challenges): void {
         $this->setTitle("Challenges");
         $challengesHTML = <<<EOL
-
 <table>
     <thead>
         <tr>
