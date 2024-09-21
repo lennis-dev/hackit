@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /challenges/*
+Sitemap: https://hackit.lennis.dev/sitemap.xml

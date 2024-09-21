@@ -173,4 +173,33 @@ EOL;
         $render->setBody(self::$aboutHTML);
         $render->render();
     }
+
+    public static function renderSitemap() {
+        header("Content-Type: application/xml");
+        echo <<<EOL
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://hackit.lennis.dev/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://hackit.lennis.dev/about</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+EOL;
+        foreach(Utils::getChallenges() as $challenge) {
+            echo <<<EOL
+    <url>
+        <loc>https://hackit.lennis.dev/c/{$challenge->getID()}</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+EOL;
+        }
+        echo "</urlset>";
+    }
 }
