@@ -13,6 +13,14 @@ class Render {
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--
+     _                     _          _
+    | |    ___ _ __  _ __ (_)___   __| | _____   __
+    | |   / _ \ '_ \| '_ \| / __| / _` |/ _ \ \ / /
+    | |__|  __/ | | | | | | \__ \| (_| |  __/\ V /
+    |_____\___|_| |_|_| |_|_|___(_)__,_|\___| \_/
+
+    -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hackit</title>
@@ -106,7 +114,6 @@ EOL;
         </tr>
     </thead>
     <tbody>
-
 EOL;
 
         foreach($challenges as $challenge) {
@@ -119,6 +126,7 @@ EOL;
             else
                 $solved = '<span style="color:#f00">✘</span>';
             $challengesHTML .= <<<EOL
+
         <tr style='cursor: pointer; cursor: hand;' onclick="window.location= '/c/$id';" class="challenge-entry">
             <td class="challenge-solve">[$solved]</td>
             <td class="challenge-title">$title</td>
