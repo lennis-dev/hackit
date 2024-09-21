@@ -33,8 +33,11 @@ if($splitUrl[1] === "c") {
     }
 } else if($splitUrl[1] === "about") {
     Render::renderAboutPage();
-} else if($splitUrl[1] === "sitemap") {
+} else if($splitUrl[1] === "sitemap.xml") {
     Render::renderSitemap();
 } else if($splitUrl[1] === "") {
     Render::renderChallengeList(Utils::getChallenges());
+} else {
+    header("Location: /");
+    exit;
 }
