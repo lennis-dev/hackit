@@ -30,8 +30,8 @@ class Render {
     <header>
         <nav>
             <a href="/">Home</a>
-            <a href="/about">About</a>
-            <a href="https://github.com/lennis-dev/hackit">GitHub</a>
+            <a href="/about" target="_blank">About</a>
+            <a href="https://github.com/lennis-dev/hackit" target="_blank">GitHub</a>
         </nav>
         <pre id="ascii-art"> _                     _          _            <br />| |    ___ _ __  _ __ (_)___   __| | _____   __<br />| |   / _ \ '_ \| '_ \| / __| / _` |/ _ \ \ / /<br />| |__|  __/ | | | | | | \__ \| (_| |  __/\ V / <br />|_____\___|_| |_|_| |_|_|___(_)__,_|\___| \_/  </pre>
     </header>
