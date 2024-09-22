@@ -1,7 +1,7 @@
 blank_issues_enabled: false
 contact_links:
   - name: Security Vulnerabilities
-    url: mailto:x@lennis.dev?subject=Security%20Issue%20Report
+    url: http://lennis.dev/sendmail?subject=Security%20Issue%20Report
     about: For reporting security vulnerabilities.
   - name: Ideas
     url: https://github.com/lennis-dev/hackit/discussions/new?category=ideas
@@ -13,7 +13,7 @@ contact_links:
     url: https://github.com/lennis-dev/hackit/discussions
     about: For general discussions.
   - name: Code of Conduct Violations
-    url: mailto:x@lennis.dev
+    url: http://lennis.dev/sendmail?subject=Code%20of%20Conduct%20Violation
     about: For reporting code of conduct violations.
   - name: Code of Conduct
     url: https://github.com/lennis-dev/hackit/blob/master/CODE_OF_CONDUCT.md
