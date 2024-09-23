@@ -1,4 +1,6 @@
-# Hackit
+<p align="center">
+ <img src="./static/logo.svg" />
+</p>
 
 > [!WARNING]
 > This project is still in heavy development and is not yet ready for use.
