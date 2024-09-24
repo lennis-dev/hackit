@@ -3,10 +3,8 @@
 namespace Dev\Lennis\Hackit\Challenges;
 
 require_once __DIR__.'/../../core/Challenge.php';
-require_once __DIR__.'/../../core/Session.php';
 
 use Dev\Lennis\Hackit\Challenge;
-use Dev\Lennis\Hackit\Session;
 
 class SourceCodeDisabled extends Challenge {
     protected string $title = 'Source Code Disabled';

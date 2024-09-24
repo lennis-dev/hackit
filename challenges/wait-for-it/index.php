@@ -3,6 +3,7 @@
 namespace Dev\Lennis\Hackit\Challenges;
 
 require_once __DIR__.'/../../core/Challenge.php';
+require_once __DIR__.'/../../core/Utils.php';
 
 use Dev\Lennis\Hackit\Challenge;
 use Dev\Lennis\Hackit\Utils;
