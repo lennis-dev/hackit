@@ -2,11 +2,6 @@
 
 Here you can describe the changes you made in this pull request.
 
-<!--
-For package updates please link to a changelog or describe changes, this helps your fellow maintainers discover breaking updates.
-For new packages please briefly describe the package or provide a link to its homepage.
--->
-
 ## Checklist
 
 - [ ] I have read the [CONTRIBUTING](https://github.com/lennis-dev/hackit/blob/master/CONTRIBUTING.md)
