@@ -76,6 +76,31 @@ abstract class Challenge {
         return Session::getChallengeData($this->getID());
     }
 
+    protected final function getChallengeFile(string $filename): string {
+        if(!preg_match('/^[a-zA-Z0-9.]+$/', $filename))
+            return null;
+        return file_get_contents(__DIR__."/../challenges/".$this->getID()."/".$filename);
+    }
+
+    protected final function getChallengeFileMimeType(string $filename): string {
+        if(!preg_match('/^[a-zA-Z0-9.]+$/', $filename))
+            return null;
+        return mime_content_type(__DIR__."/../challenges/".$this->getID()."/".$filename);
+    }
+
+    public final function renderFile(string $filename) {
+        header("Content-Type: ".$this->getChallengeFileMimeType($filename));
+        echo $this->getChallengeFile($filename);
+    }
+
+    protected final function listChallengeFiles(): array {
+        $files = scandir(__DIR__."/../challenges/".$this->getID());
+        $files = array_filter($files, function ($file) {
+            return !in_array($file, [".", "..", "index.php"]);
+        });
+        return $files;
+    }
+
     protected final function setChallengeData(array $data): void {
         Session::setChallengeData($this->getID(), $data);
     }

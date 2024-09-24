@@ -16,6 +16,10 @@ if($splitUrl[1] === "c") {
     try {
         $splitUrl[2] = explode('?', $splitUrl[2])[0];
         $challenge = Utils::getChallenge($splitUrl[2]);
+        if($splitUrl[3] !== "" && $splitUrl[3] !== null) {
+            $challenge->renderFile($splitUrl[3]);
+            exit;
+        }
         if(isset($_GET["code"])) {
             if($challenge->validate($_GET["code"])) {
                 $challenge->setSolved(true);
