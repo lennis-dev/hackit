@@ -1,5 +1,3 @@
-name: Idea
-description: Do you have an idea for a new feature or improvement? Share it with us!
 title: "[FEATURE] <title>"
 labels: ["enhancement"]
 body:
