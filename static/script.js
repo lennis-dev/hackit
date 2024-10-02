@@ -11,7 +11,9 @@ const codeInputChars = codeInput.getElementsByTagName("span");
 
 var code = [];
 
-window.addEventListener("keydown", async (ev) => {
+window.addEventListener("keydown", type);
+
+async function type(ev) {
     if (ev.ctrlKey)
         return;
     if (ev.key === "Backspace") {
@@ -38,6 +40,18 @@ window.addEventListener("keydown", async (ev) => {
             }
         }
         ev.preventDefault();
+    }
+}
+
+window.addEventListener("paste", async (ev) => {
+    ev.preventDefault();
+    const clipboardData = ev.clipboardData.getData("text/plain");
+    for (const char of clipboardData) {
+        await type({
+            key: char,
+            ctrlKey: false,
+            preventDefault: () => { }
+        });
     }
 });
 
