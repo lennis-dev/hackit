@@ -8,7 +8,7 @@ use Dev\Lennis\Hackit\Challenge;
 
 class ColorfulMessage extends Challenge {
     protected string $title = 'Colorful message';
-    protected string $description = 'This is the first challenge. It is very easy.';
+    protected string $description = 'You know, sometimes, you gotta look behind the colors to find out the solution.';
     protected int $difficulty = 2;
     protected string $injectJavaScript = <<<EOL
 function c_rgb2hex(rgb){
