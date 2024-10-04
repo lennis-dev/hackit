@@ -28,7 +28,7 @@ EOL;
 EOL;
     protected function prepareChallenge(): void {
         if(!preg_match('/^0x[0-9a-f]{6}$/', $this->getCode())) {
-            $this->setCode('0x'.dechex(rand(0x000000, 0xFFFFFF)));
+            $this->setCode('0x'.str_pad(dechex(rand(0x000000, 0xFFFFFF)), 6, '0', STR_PAD_LEFT));
         }
         $this->injectHTML = str_replace('[color]', str_replace("0x", "#", $this->getCode()), $this->injectHTML);
     }
