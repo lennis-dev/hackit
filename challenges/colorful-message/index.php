@@ -25,6 +25,13 @@ EOL;
 <div style="text-align:center">
     I <strong style="color:#ff0000; text-width:bold"><3</strong> <span id="c-message" style="color: [color]">colors</span>!
 </div>
+
+<div id="menu-icon" onclick="document.querySelector('nav').classList.toggle('active')">
+        <div></div>
+        <div></div>
+        <div></div>
+</div>
+
 EOL;
     protected function prepareChallenge(): void {
         if(!preg_match('/^0x[0-9a-f]{6}$/', $this->getCode())) {
@@ -33,3 +40,4 @@ EOL;
         $this->injectHTML = str_replace('[color]', str_replace("0x", "#", $this->getCode()), $this->injectHTML);
     }
 }
+

@@ -19,7 +19,28 @@ function validate(code){
     }
 }
 EOL;
+
+    // Correct method definition
     protected function prepareChallenge(): void {
         $this->setCode('P4SSW0RD');
     }
+
+    public function render() {
+        echo '<!-- Menu button and menu content -->';
+        echo '<div id="menu-icon" onclick="document.querySelector(\'nav\').classList.toggle(\'active\')">';
+        echo '    <div></div>';
+        echo '    <div></div>';
+        echo '    <div></div>';
+        echo '</div>';
+
+       
+        echo '<script>';
+        echo $this->injectJavaScript;
+        echo '</script>';
+    }
 }
+
+
+$challenge = new EasyBeginning();
+
+$challenge->render(); 

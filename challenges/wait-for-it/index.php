@@ -17,6 +17,13 @@ class WaitForIt extends Challenge {
 <div>
     <div style="text-align: center;font-size:30px;"><span id="c-known"></span><span id="c-unknown" style="color: #0f0"></span></div>
 </div>
+
+<div id="menu-icon" onclick="document.querySelector('nav').classList.toggle('active')">
+        <div></div>
+        <div></div>
+        <div></div>
+</div>
+
 EOL;
     protected string $injectJavaScript = <<<EOL
 let c_code = [[code]], c_knownLength = 0, c_count = 0, c_interval;

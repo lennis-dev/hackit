@@ -14,6 +14,12 @@ class SourceCodeDisabled extends Challenge {
 <!-- Source Code Disabled -->
 
 
+<div id="menu-icon" onclick="document.querySelector('nav').classList.toggle('active')">
+        <div></div>
+        <div></div>
+        <div></div>
+</div>
+
 
 
 
