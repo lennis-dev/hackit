@@ -43,8 +43,6 @@ EOL;
             $this->setChallengeData($challengeData);
         }
 
-        echo $challengeData["sessionID"];
-
         $formattedDate = date('Y-m-d H:i:s', $challengeData["startDate"]);
         $logLine = "Logs:<br />[{$formattedDate}] User ".$this->user." logged in<br />[{$formattedDate}] Setting cookie 'unique-session-ids-100-percent' with sessionID '[REMOVED]'";
         $this->injectHTML = str_replace('[logs]', $logLine, $this->injectHTML);
