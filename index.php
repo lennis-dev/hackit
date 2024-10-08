@@ -16,21 +16,21 @@ if($splitUrl[1] === "c") {
     try {
         $splitUrl[2] = explode('?', $splitUrl[2])[0];
         $challenge = Utils::getChallenge($splitUrl[2]);
-        if($splitUrl[3] !== "" && $splitUrl[3] !== null) {
-            $challenge->renderFile($splitUrl[3]);
-            exit;
-        }
-        if(isset($_GET["code"])) {
-            if($challenge->validate($_GET["code"])) {
-                $challenge->setSolved(true);
-                header("Location: /");
-            } else {
-                Render::renderChallenge($challenge, $_GET["code"]);
+        if(count($splitUrl) === 4) {
+            if($splitUrl[3] !== "" && $splitUrl[3] !== null)
+                $challenge->renderFile($splitUrl[3]);
+        } else {
+            if(isset($_GET["code"])) {
+                if($challenge->validate($_GET["code"])) {
+                    $challenge->setSolved(true);
+                    header("Location: /");
+                } else
+                    Render::renderChallenge($challenge, $_GET["code"]);
+                exit;
             }
-            exit;
+            Render::renderChallenge($challenge);
         }
-        Render::renderChallenge($challenge);
-        return;
+        exit;
     } catch (Exception $e) {
         header("Location: /");
         exit;
