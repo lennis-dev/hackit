@@ -8,7 +8,7 @@ use Dev\Lennis\Hackit\Challenge;
 
 class PercentUniqueSessionIds extends Challenge {
     protected string $title = '100% Unique Session IDs';
-    protected string $description = 'I found a way to generate 100% unique sessions, believe me? :)';
+    protected string $description = 'I found a way to generate 100% unique sessions, believe me?';
     protected int $difficulty = 3;
     protected string $user = 'admin';
     protected string $injectHTML = <<<EOL
@@ -21,6 +21,10 @@ class PercentUniqueSessionIds extends Challenge {
         color: #0f0;
     }
 </style>
+<div style="font-family: monospace;">
+    <div>PHP Code:</div>
+    <div><span style="color: #dcdcaa;">dechex</span><span style="color: #d4d4d4;">(</span><span style="color: #9cdcfe;">\$date</span><span style="color: #d4d4d4;">)</span><span style="color: #d4d4d4;">.</span><span style="color: #dcdcaa;">bin2hex</span><span style="color: #d4d4d4;">(</span><span style="color: #569cd6;">\$this</span><span style="color: #d4d4d4;">-&gt;</span><span style="color: #9cdcfe;">user</span><span style="color: #d4d4d4;">);</span></div>
+</div>
 <p>[text]</p>
 <div style="font-family: monospace;">
     [logs]
