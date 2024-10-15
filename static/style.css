@@ -23,8 +23,7 @@ nav {
 }
 
 nav>a {
-    padding: 0px 30px;
-    text-decoration: none;
+    margin: 0px 30px;
     user-select: all;
 }
 
@@ -88,7 +87,26 @@ body {
 
 a {
     color: var(--color);
-    font-weight: bold
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+}
+
+a::after {
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0%;
+    display: block;
+    background: #0f0;
+    content: "";
+    height: 2px;
+    transform: translateX(-50%);
+    transition: .5s;
+}
+
+a:hover::after {
+    width: 100%;
 }
 
 th {
