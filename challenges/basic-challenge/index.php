@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Dev\Lennis\Hackit\Challenges;
 
 require_once __DIR__.'/../../core/Challenge.php';
